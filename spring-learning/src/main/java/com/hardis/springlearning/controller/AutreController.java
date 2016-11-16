@@ -10,13 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class AutreController
 {
 
-
-	@RequestMapping("/toto")
-	public void toto()
-	{
-		System.out.println("toto");
-	}
-
 	@RequestMapping("/{anotherParam}")
 	public String anyElseParam(@PathVariable final String anotherParam, final Model model)
 	{

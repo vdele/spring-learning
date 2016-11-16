@@ -26,6 +26,14 @@ public class PersonneController
 {
 	@Autowired
 	private PersonneSupport personDAO;
+	
+
+	@RequestMapping(value = "/", method = RequestMethod.GET)
+	public String afficherBonjour(final ModelMap pModel)
+	{		
+		return afficherPersonnes(pModel);
+	}
+
 
 	@RequestMapping(value = "/personnes", method = RequestMethod.GET)
 	public String afficherPersonnes(final ModelMap pModel)
